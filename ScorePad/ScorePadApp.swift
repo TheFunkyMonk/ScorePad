@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ScorePadApp: App {
+    var systemColorScheme: ColorScheme {
+        UITraitCollection.current.userInterfaceStyle == .dark ? .dark : .light
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(systemColorScheme: systemColorScheme)
         }
     }
 }
